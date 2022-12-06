@@ -33,9 +33,6 @@ module mm(
     input [7:0]output_addr_per_feature, //Co
     input [15:0]number_of_node,          //N
 
-    input start_valid,
-    input done,
-
     input weight_data_valid,
     input [8191:0]weight_data,
 
@@ -44,6 +41,9 @@ module mm(
 
     output output_data_valid,
     output [511:0]output_data,
+    
+    input start_valid,
+    output done,
 
     output addr_valid,  //output valid
     output [10:0]addr,  //output address
